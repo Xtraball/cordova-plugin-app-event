@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013-2016 by appPlant UG. All rights reserved.
+ * Copyright (c) 2013-2017 by appPlant GmbH. All rights reserved.
  *
  * @APPPLANT_LICENSE_HEADER_START@
  *
@@ -27,6 +27,10 @@
 
 #import <objc/runtime.h>
 
+#ifdef __CORDOVA_5_0_0
+NSString* const CDVLocalNotification = @"CDVLocalNotification";
+#endif
+
 @implementation CDVPlugin (APPAppEvent)
 
 static IMP orig_pluginInitialize;
@@ -42,8 +46,8 @@ static IMP orig_pluginInitialize;
 {
     // To keep compatibility with local-notifiations v0.8.4
     if ([NSStringFromClass(self) isEqualToString:@"APPLocalNotification"]
-        || [self conformsToProtocol:@protocol(APPAppEventDelegate)]) {
-
+        || [self conformsToProtocol:@protocol(APPAppEventDelegate)])
+    {
         orig_pluginInitialize = [self exchange_init_methods];
     }
 }

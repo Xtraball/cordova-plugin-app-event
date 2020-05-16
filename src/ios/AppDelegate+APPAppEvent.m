@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013-2016 by appPlant UG. All rights reserved.
+ * Copyright (c) 2013-2017 by appPlant GmbH. All rights reserved.
  *
  * @APPPLANT_LICENSE_HEADER_START@
  *
@@ -22,6 +22,8 @@
  */
 
 #import "AppDelegate+APPAppEvent.h"
+#import "CDVPlugin+APPAppEvent.h"
+
 #import <Availability.h>
 #import <objc/runtime.h>
 

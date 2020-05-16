@@ -1,6 +1,6 @@
 {
   "name": "AppEvent",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Cordova AppEvent",
   "main": "index.js",
   "scripts": {
@@ -19,11 +19,6 @@
     "cordova",
     "ecosystem:cordova"
   ],
-  "cordova": {
-    "platforms": [
-      "ios"
-    ]
-  },
   "platforms": [
     "ios"
   ],
